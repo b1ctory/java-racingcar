@@ -1,10 +1,11 @@
 import java.util.Random;
 
-public class Car{
+public class CarRacingModel {
     private final String name;
     private int position = 0;
     private Random random = new Random();
-    public Car(String name){
+
+    public CarRacingModel(String name){
         this.name = name;
     }
 
@@ -25,10 +26,11 @@ public class Car{
         return 0;
     }
 
-    public void printMove(){
+    public String moving(){
+        String str = "-";
         for(int i = 0; i < position; i++){
-            System.out.print("-");
+            str += "-";
         }
-        System.out.println();
+        return str;
     }
 }
